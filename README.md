@@ -24,7 +24,7 @@ Testing the commands for the desired output.
 # COMMANDS:
 ### Create the following files file1, file2 as follows:
 cat > file1
-
+```
 chanchal singhvi
 c.k. shukla
 s.n. dasgupta
@@ -32,7 +32,7 @@ sumit chakrobarty
 ^d
 
 cat > file2
-
+```
 anil aggarwal
 barun sengupta
 c.k. shukla
@@ -43,7 +43,7 @@ s.n. dasgupta
 ### Display the content of the files
 cat < file1
 ## OUTPUT
-
+```
 localhost:~# cat < file1
 chanchal singhvi
 c.k. shukla
@@ -55,7 +55,7 @@ sumit chakrobarty
 
 cat < file2
 ## OUTPUT
-
+```
 localhost:~# cat < file2
 anil aggarwal
 barun sengupta
@@ -68,7 +68,7 @@ s.n. dasgupta
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
-
+```
 localhost:~# cmp file1 file2
 file1 file2 differ: char 1, line 1
 localhost:~# comm file1 file2
@@ -84,7 +84,7 @@ sumit chakrobarty
 
 comm file1 file2
  ## OUTPUT
-
+```
 localhost:~# comm file1 file2
         anil aggarwal
         barun sengupta
@@ -98,7 +98,7 @@ sumit chakrobarty
  
 diff file1 file2
 ## OUTPUT
-
+```
 localhost:~# diff file1 file2
 --- file1
 +++ file2
@@ -117,13 +117,13 @@ localhost:~# diff file1 file2
 ### Create the following files file11, file22 as follows:
 
 cat > file11
-
+```
 Hello world
 This is my world
 ^d
 
 cat > file22
-
+```
 1001 | Ram | 10000 | HR
 1002 | tom |  5000 | Admin
 1003 | Joe |  7000 | Developer
@@ -136,18 +136,18 @@ cut -c1-3 file11
 
 
 
-
+```
 cut -d "|" -f 1 file22
 ## OUTPUT
 
 
-
+```
 cut -d "|" -f 2 file22
 ## OUTPUT
 
-
+```
 cat < newfile 
-
+```
 Hello world
 hello world
 ^d
@@ -159,42 +159,42 @@ hello world
 grep Hello newfile 
 ## OUTPUT
 
-
+```
 
 grep hello newfile 
 ## OUTPUT
 
 
-
+```
 
 grep -v hello newfile 
 ## OUTPUT
 
-
+```
 
 cat newfile | grep -i "hello"
 ## OUTPUT
 
 
 
-
+```
 cat newfile | grep -i -c "hello"
 ## OUTPUT
 
 
 
-
+```
 grep -R ubuntu /etc
 ## OUTPUT
 
 
-
+```
 grep -w -n world newfile   
 ## OUTPUT
-
+```
 
 cat < newfile 
-
+```
 Hello world
 hello world
 Linux is world number 1
@@ -204,7 +204,7 @@ Linux is best in this World
 
 
 cat > newfile
-
+```
 Hello world
 hello world
 Linux is world number 1
@@ -214,61 +214,61 @@ Linux is best in this World
  
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
-
+```
 
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
 
 
-
+```
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
-
+```
 
 
 
 egrep '(^hello)' newfile 
 ## OUTPUT
 
-
+```
 
 egrep '(world$)' newfile 
 ## OUTPUT
 
 
-
+```
 egrep '(World$)' newfile 
 ## OUTPUT
-
+```
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
 
 
-
+```
 egrep '[1-9]' newfile 
 ## OUTPUT
 
-
+```
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
-
+```
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
 
-
+```
 egrep l{2} newfile
 ## OUTPUT
-
+```
 
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
 
-
+```
 cat > file23
 
 1001 | Ram | 10000 | HR
@@ -282,10 +282,10 @@ cat > file23
 ^d
 
 
-
+```
 sed -n -e '3p' file23
 ## OUTPUT
-
+```
 
 
 sed -n -e '$p' file23
